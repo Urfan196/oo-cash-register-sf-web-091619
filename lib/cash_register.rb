@@ -20,9 +20,9 @@ class CashRegister
     if @discount != 0
       # binding.pry
       @total -= @total * @discount / 100
-      return "After the discount, the total comes to #{@total}."
+      return "After the discount, the total comes to $#{@total}."
     else
-      puts "There is no discount to apply."
+      return "There is no discount to apply."
     end
   end
 
