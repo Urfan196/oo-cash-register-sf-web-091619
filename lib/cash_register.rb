@@ -9,6 +9,8 @@ def initialize (discount)
 end
 
 def add_item (title, price, quantity)
+    @price = price
+    @quantity = quantity
   @total += price * quantity
   @items << title
 end
@@ -24,6 +26,16 @@ end
 
 def items
   @items
+end
+
+def void_last_transaction
+  @items.delete_at(-1)
+if @items.size == 0
+  @total == 0.0
+else
+  @total -= @price * @quantity
+end
+
 end
 
 end
