@@ -13,7 +13,9 @@ class CashRegister
       @price = price
       @quantity = quantity
     @total += price * quantity
+    quantity.times do
     @items << title
+  end
   end
 
   def apply_discount
